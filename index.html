@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="index.css">
+	<script src="Script.js"></script>
+	<script src="Script2.js"></script>
+    <script src="NumberSplit.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    src="http://maps.googleapis.com/maps/api/js">
+    </script>
+
+<script>
+    function initialize() {
+        var myCenter = new google.maps.LatLng(37.8719063,-122.2585393);
+        var marker;
+        var mapProp = {
+            center: myCenter,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            animation: google.maps.Animation.BOUNCE
+        });
+
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <title>Home</title>
+</head>
+
+<body onload ="init();">
+
+	<header>
+		<hgroup>
+			<h1>my testing website</h1>
+			<h2></h2>
+			<h3>for learning how to code websites in HTML5 and CSS3 (no starting templete)</h3>
+			<h3></h3>
+		</hgroup>
+		
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a id = "contact" href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+	
+	<section>
+		<article>
+
+			<h2>Home</h2>
+			<p>
+				Welcome to the Home page. Examples of HTML styled with CSS and animated with Javascript lay all over this page. Also check out calcentral.me and 1eo.me
+                If you want to see the code, right click the page and select "Inspect Element".
+			</p>
+
+			<hr>
+
+			<h2>HTML Tags</h2>
+			<div id = "tags">
+				&lth1&gt &lth2&gt &lth3&gt &ltp&gt &ltarticle&gt &ltsection&gt &ltbr&gt  &ltfigure&gt &ltfigcaption&gt &ltimg src=alt=&gt
+				&lta href=&gt &lthead&gt &ltbody&gt &ltfooter&gt &lthgroup&gt &ltnav&gt &ltul&gt &ltli&gt &ltlink rel= type= href= media=&gt &ltol&gt 
+				&ltaside&gt &ltsmall&gt &ltbutton&gt &ltem&gt &lthr&gt &lthtml&gt &ltcanvas&gt &lt&gt &lt&gt &lt&gt 
+				&lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt 
+				&lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt 
+				&lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt 
+				&lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt &lt&gt 
+			<br>
+				
+			</div>
+			
+			<hr>
+			
+			<h2>List</h2>
+			<ol>
+				<li>&+l+t = &lt</li>
+				<li>&+g+t = &gt</li>
+				<li>&lt;!DOCTYPE html&gt;</li>
+				<li>&lt;html lang="en"&gt;</li>
+				<li>&ltmeta charset="utf-8"&gt</li>
+			</ol>
+			
+			<hr>
+			
+			<h2>Image with figcaption</h2>
+			<figure>
+                <img src ="html5css3.png" alt ="Image of HTML5 and CSS3 logos">
+				<figcaption>Figure 1. image</figcaption>
+			</figure>
+			
+			<hr>
+			
+			<h2>Javascript</h2>
+			<canvas id = "myCanvas" width = 800 height = 500 style="border:1px solid #000000;"><p>Canvas not supported</p></canvas>
+			<br>
+			<button onclick="displayAlert();">alert</button>
+            <br>
+            <h3>A method converted from Java into JavaScript</h3>
+            <p>Enter a number 1-20
+                <input id="numb" type="number">
+                <button type="button" onclick="numberSpliter(document.getElementById('numb').value)">Submit</button>
+            </p> 
+            <div id="numbersplitoutput">Output: <br></div>
+
+		</article>
+        <br>
+        <h2>Google Maps API</h2>
+           <div id="googleMap" style="width:500px;height:380px;"></div>
+        <br>
+        <h2>My name is going to be on Mars!</h2>
+        <iframe src="http://mars.nasa.gov/participate/send-your-name/insight/?action=getcert&e=1&pid=3&cn=25724808198" width="750" height="307" scrolling="no" frameborder="0"></iframe>
+    	</section>
+	
+	<footer>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+			
+		<small>&copy; thanatcha</small>
+	</footer>
+</body>
+</html>
